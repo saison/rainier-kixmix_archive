@@ -3,6 +3,7 @@ html(lang="ja")
   head
     meta(charset="UTF-8")
     link(rel="stylesheet", href="css/style.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     script(src="js/script.js")
     title H440 - KixMix Archive
   body
@@ -10,34 +11,44 @@ html(lang="ja")
     aside.sidemenu
       ul.sidemenu__list
         li.sidemenu__item--logo
-          a(href="#")
+          a(href="#top")
             img(src="images/logo.png", alt="logo")
         li.sidemenu__item
-          a(href="#") 作品概要
+          a(href="#about") 作品概要
         li.sidemenu__item
-          a(href="#") 企画書
+          a(href="#idea") 企画書
         li.sidemenu__item
-          a(href="#") 会計報告書
+          a(href="#pay") 会計報告書
         li.sidemenu__item
-          a(href="#") 感想
+          a(href="#feedback") 感想
         li.sidemenu__item
-          a(href="#") 制作物
+          a(href="#product") 制作物
         li.sidemenu__item
-          a(href="#") 手順書
+          a(href="#flow") 手順書
     section.wrapper
-      
-      article.contents
+      article#top.contents
+        header.contents__header
+          h2 H440 KixMix
+        section.contents__section
+          h3 キミの想いがライブを変える！声と動きでステージを変幻自在！
+          p.contents__section__body
+            |どこからかでも参加可能！会場のみんなの声と動きがステージの演出を変化させる！
+            br
+            |インタラクティブな未来のライブで盛り上がれ！
+            img(src="images/all.jpg", alt="themeimage")
+            
+      article#about.contents
         header.contents__header
           h2 作品概要
         section.contents__section
           h3 企画概要
-          p
+          p.contents__section__body
             |どこからかでも参加可能！会場のみんなの声と動きがステージの演出を変化させる！
             br
             |インタラクティブな未来のライブで盛り上がれ！
         section.contents__section
           h3 企画内容
-          p
+          p.contents__section__body
             |会場だけでしか参加できないライブが変わる！
             br
             br
@@ -53,11 +64,124 @@ html(lang="ja")
             |この世に1つしかない全く新しいライブができる！
             br
             |みんなでライブを作りだして場所関係なく、ライブを更に楽しんで元気に！
-
-
-      article.contents
-        header.contents__header
-          h2 作品概要
         section.contents__section
-          h3 企画概要
-          p
+          h3 システム構成図
+          div.contents__section__body
+            img(src="images/system.png", alt="Ststem Images")
+        section.contents__section
+          h3 使用技術
+          div.contents__section__body
+            h4 Server Side System
+            ul
+              li Server - Node.js ( Express )
+              li Real Time Communication - Socket.io
+              li Database - MySQL
+            h4 Front Side System
+            ul
+              li HTML - Jade Template Engine
+              li CSS - Sass / Compass Framework
+              li JavaScript - CoffeeScript
+              li Movie - Miku Miku Dance
+        section.contents__section
+          h3 Movie
+          div.contents__section__body
+            video(src="#")
+              
+      article#idea.contents
+        header.contents__header
+          h2 企画書
+        section.contents__section
+          h3 ワンシート企画書
+          div.contents__section__body
+            img(src="images/onesheet.png", alt="onesheet")
+        section.contents__section
+          h3 プログラムイラスト
+          div.contents__section__body
+            img(src="images/h440.png", alt="ProgramIllust")
+        section.contents__section
+          h3 ブースイメージ図
+          div.contents__section__body
+            img(src="images/booth.png", alt="booth")
+              
+      article#pay.contents
+        header.contents__header
+          h2 会計報告書
+          div.contents__section__body
+            h3 別ファイル(PDF)
+            p
+              a(href="images/pay.pdf",target="_blank") 会計報告書.pdf
+              
+      article#feedback.contents
+        header.contents__header
+          h2 感想
+          div.contents__section__body
+            ul
+              li
+                |Reader  Kix
+                br
+                |リーダーとして進捗管理やグループとして楽しくやることがとても苦労しました。
+                br
+                |企画立案やブース設計など、慣れないことも多く大変だったけど、とても楽しかったです！
+              li
+                |Programmer  Saison
+                br
+                |授業では扱っていない技術だけを使って組み上げたのが、大変でした。
+                br
+                |ただ、今まで学んだ基礎と応用を使って作りきりました
+              li
+                |Designer  Rieco
+                br
+                |初めは、企画がなかなか決まらず、とても苦戦していました。
+                br
+                |企画が通ってからは、短い期間での製作でしたが、とても充実していて楽しかったです！
+              li
+                |MovieCreator  tkwww
+                br
+                |いろいろと大変なこともあったけど最終的に盛り上がって発表なども出来たので個人的にはとても楽しかったです。
+              li
+                |Crafter  y.itagaki
+                br
+                |約五ヶ月間短いようで長い期間でしたが、皆で一つの目標に向かって頑張りました。
+                br
+                |辛く大変な時もあったけど、みんなと一緒に作成した日々はとても楽しかったです。
+              li
+                |Crafter Kato
+                br
+                |賞を取れなかったのは残念だったけどいい思い出になったと思います！
+              li
+                |MoodMaker/Crafter Hide
+                br
+                |モードやHAL、首都医校の人たちの作品を見たり体験したりして改めてこのイベントの素晴らしさを痛感し、自分の中大きなイベントになりました！
+      
+      article#product.contents
+        header.contents__header
+          h2 制作物
+          div.contents__section__body
+            a(href="http://rainier.saison-lab.com:3000") http://rainier.saison-lab.com:3000
+      
+      article#flow.contents
+        header.contents__header
+          h2 手順書
+          div.contents__section__body
+            p
+              |KixMixにログイン＆新規登録
+              br
+              |↓
+              br
+              |ライブ会場の選択
+              br
+              |↓
+              br
+              |ライブに合わせて盛り上がる
+              br
+              |・スマホを振る
+              br
+              |・Twitterで拡散
+              br
+              |・コールボタンで盛り上げる
+              br
+              |↓
+              br
+              |ライブ終了時にログアウト
+      footer
+        p Copyright &copy; 2015 KixMix All Rights Reserved.

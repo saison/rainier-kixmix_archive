@@ -50,6 +50,8 @@ body{
       height: 30px;
       line-height: 30px;
       font-size: 15px;
+      color: $black;
+      text-decoration: none;
     }
     // Logo Design
     &--logo{
@@ -68,11 +70,21 @@ body{
 .wrapper{
   @include box-sizing(border-box);
   width: 100%;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-left: 17%;
   padding-right: 5%;
   position: relative;
   z-index: 3;
+  footer{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    color: $white;
+  }
 }
 .contents{
   @include box-sizing(border-box);
@@ -80,21 +92,48 @@ body{
   margin-bottom: 100px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.3);
+  @include box-shadow(0 0 3px $white);
   &__header{
     h2{
       font-size: 30px;
+      @include text-shadow(0 0 3px rgba(255, 255, 255, 0.6));
     }
   }
   &__section{
     margin-top: 60px;
     margin-bottom: 30px;
     h3{
-      font-size: 19px;
+      font-size: 22px;
+      @include text-shadow(0 0 3px rgba(255, 255, 255, 0.6));
     }
-    p{
+    &__body{
       margin-top: 10px;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 180%;
+      @include text-shadow(0 0 3px rgba(255, 255, 255, 0.6));
+      h4{
+        font-size: 18px;
+      }
+      ul{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        list-style-type: disc;
+        list-style-position: inside;
+        li{
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+      img{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      video{
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
