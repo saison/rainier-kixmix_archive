@@ -1,0 +1,22 @@
+{
+  "name": "saison-gulp-setup",
+  "version": "1.0.0",
+  "description": "gulp setup",
+  "author": "TakumaNishimura @ Saison",
+  "devDependencies": {
+    "browserify": "*",
+    "coffeeify": "*",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-coffee": "^2.2.0",
+    "gulp-compass": "^1.3.1",
+    "gulp-connect": "*",
+    "gulp-jade": "*",
+    "gulp-coffee": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "^1.0.7",
+    "socket.io": "*"
+  }
+}
