@@ -4,6 +4,7 @@ html(lang="ja")
     meta(charset="UTF-8")
     link(rel="stylesheet", href="css/style.css")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(type="text/javascript" src="js/jquery.easing.1.3.js")
     script(src="js/script.js")
     title H440 - KixMix Archive
   body
@@ -25,6 +26,8 @@ html(lang="ja")
           a(href="#product") 制作物
         li.sidemenu__item
           a(href="#flow") 手順書
+        li.sidemenu__item
+          a(href="#gallery") ギャラリー
     section.wrapper
       article#top.contents
         header.contents__header
@@ -183,5 +186,16 @@ html(lang="ja")
               |↓
               br
               |ライブ終了時にログアウト
+      article#gallery.contents
+        header.contents__header
+          h2 ギャラリー
+          div.contents__section__body--gallery
+            ul
+              - for (var i = 1; i < 15; i++) {
+              li
+                img(src="images/gallery/gallery#{i}.jpg", alt="gallery#{i}")
+              - }
+              li
+                img(src="images/all.jpg", alt="themeimage")
       footer
         p Copyright &copy; 2015 KixMix All Rights Reserved.

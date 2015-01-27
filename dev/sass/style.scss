@@ -134,6 +134,23 @@ body{
         width: 100%;
         height: auto;
       }
+      &--gallery{
+        margin-top: 50px;
+        & > ul{
+          width: 100%;
+          li{
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            img{
+              width: 80%;
+              height: auto;
+              @include border-radius(8px);
+              @include box-shadow(0 0 5px $white);
+            }
+          }
+        }
+      }
     }
   }
 }

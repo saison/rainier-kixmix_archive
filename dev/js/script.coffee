@@ -8,7 +8,8 @@ $ ->
       target -= 50
       $("html,body").stop().animate
         scrollTop: target
-      , 1000
+      , 1500
+      , 'easeInOutBack'
       false
 
     return
